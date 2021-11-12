@@ -2,8 +2,8 @@ output "az" {
   value = aws.az
 }
 
-output "public_ip" {
-  value = aws_route53_record.wordpress.public_ip
+output "PIP" {
+  value = aws_instance.web.public_ip
 }
 
 output "instance_id" {

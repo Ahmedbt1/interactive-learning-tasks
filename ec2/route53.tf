@@ -1,7 +1,7 @@
 resource "aws_route53_record" "wordpress" {
-  zone_id = aws_route53_zone.primary.zone_id
+  zone_id = "Z05584593KK6MIYIUNKLA"
   name    = "wordpress.benjelloun.click"
   type    = "A"
-  ttl     = "300"
-  records = [aws_eip.lb.public_ip]
+  ttl     = "30"
+  records = [aws_instance.web.public_ip]
 }
